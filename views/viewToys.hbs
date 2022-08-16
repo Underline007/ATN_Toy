@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="view.css">
+    <title>All Toy</title>
+</head>
+
+<body>
+    <div>
+        <h1>All Toys</h1>
+    </div>
+    <div>
+        <form action="/search" method="post">
+            <input type="text" name="txtSearch" id="">
+            <input type="submit" value="Search" id="">
+        </form>
+    </div>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Name of Toy</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each toys}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{price}}</td>
+                    <td><img src="{{picture}}" width="400" height="200" alt="Image of Toy"></td>
+                    <td><a href="/delete?id={{_id}}">Delete</a> <br> <br>
+                    <a href="/edit?id={{_id}}">Edit</a></li></td>
+                </tr>
+                {{/each}}
+            <tbody>
+        </table>
+    </div>
+
+    <button><a href="/">Back to Home</a></button>
+</body>
+
+</html>

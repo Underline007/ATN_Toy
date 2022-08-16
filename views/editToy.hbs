@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div>
+    <h1>Edit Toy</h1>
+    <form action="/insertToy" method="POST">
+        <input type="hidden" name="id" value="{{toy._id}}">
+        <label for="">Name of Toy</label> <input type="text" name="txtName" value="{{toy.name}}">
+        <br>
+        <label class="lblprice" for=""> Price of Toy </label> <input type="text" name="txtPrice" value="{{toy.price}}">
+        <br>
+        <label for="">URL Picture</label> <input type="text" name="txtPic" value="{{toy.picture}}">
+        <br>
+        <h3 style="color: white;">{{error}}</h3>
+        <input type="submit" value="Update">
+        <br>
+        <br>
+    </form>
+    </div>
+    
+</body>
+</html>

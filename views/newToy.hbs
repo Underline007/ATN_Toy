@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new.css">
+    <title>Add New Toy</title>
+</head>
+
+<body>
+    <div>
+    <h1>Add New Toy</h1>
+    <form action="/insertToy" method="POST">
+        <label for="">Name of Toy</label> <input type="text" name="txtName" id=""> 
+        <br>
+        <label class="lblprice" for=""> Price of Toy </label> <input type="text" name="txtPrice" id="">
+        <br>
+        <label for="">URL Picture</label> <input type="text" name="txtPic" id="">
+        <br>
+        <h3 style="color: white;">{{error}}</h3>
+        <input type="submit" value="Insert">
+        <br>
+        <br>
+    </form>
+    </div>
+</body>
+
+</html>
